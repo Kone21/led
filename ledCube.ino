@@ -229,7 +229,7 @@ void loop() {
     digitalWrite(led_pin4, LOW);
     digitalWrite(led_pin5, LOW);
     digitalWrite(led_pin6, LOW);
-    Serial.println("Невозможная комбинация");
+    Serial.println("Ошибка ввода");
     }
   }
 }
