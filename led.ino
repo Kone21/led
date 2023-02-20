@@ -14,7 +14,7 @@ void setup() {
   pinMode(led_pin4, OUTPUT);
   pinMode(led_pin5, OUTPUT);
   pinMode(led_pin6, OUTPUT);
-  Serial.println("Введите номер лампочки(от 1 до 8)");
+  Serial.println("Введите номер лампочки(от 1 до 8 или 12, 23, 56...)");
 }
 
 void loop() {
