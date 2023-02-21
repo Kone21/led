@@ -17,8 +17,34 @@ void setup() {
   Serial.println("Enter num of LED(from 1 to 8 or 12, 23, 56...)");
 }
 
+
+
 void loop() {
+  Serial.println(Serial.available());
+
+  switch (var) {
+    case 17:
+      delay(10);
+      digitalWrite(led_pin1, HIGH);
+      digitalWrite(led_pin2, LOW);
+      digitalWrite(led_pin3, LOW);
+      digitalWrite(led_pin4, LOW);
+      digitalWrite(led_pin5, LOW);
+      digitalWrite(led_pin6, HIGH);
+      delay(10);
+      digitalWrite(led_pin1, LOW);
+      digitalWrite(led_pin2, LOW);
+      digitalWrite(led_pin3, HIGH);
+      digitalWrite(led_pin4, LOW);
+      digitalWrite(led_pin5, HIGH);
+      digitalWrite(led_pin6, LOW);
+    break;
+      
+    }
+
+  
   if (Serial.available() > 1) {
+  
   var = Serial.parseInt();
   Serial.println(var);
   switch (var) {    
@@ -254,7 +280,28 @@ void loop() {
     digitalWrite(led_pin4, LOW);
     digitalWrite(led_pin5, LOW);
     digitalWrite(led_pin6, HIGH);
+    Serial.println("diagonal led 1 and 3 powered up");
+    break;
+     case 24:
+    digitalWrite(led_pin1, LOW);
+    digitalWrite(led_pin2, HIGH);
+    digitalWrite(led_pin3, LOW);
+    digitalWrite(led_pin4, HIGH);
+    digitalWrite(led_pin5, LOW);
+    digitalWrite(led_pin6, HIGH);
+    Serial.println("diagonal led 2 and 4 powered up");
+    break;
+
+
+
+      
+      
+      
+
+      
+
     Serial.println("diagonal");
+      
     break;
     default:
     digitalWrite(led_pin1, LOW);
